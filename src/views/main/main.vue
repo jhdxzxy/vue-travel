@@ -86,7 +86,6 @@ export default {
 </script>
 
 <style scoped>
-
 .body {
 	position: absolute;
 	contain: '';
