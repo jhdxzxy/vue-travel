@@ -8,61 +8,77 @@ const routes = [
 		redirect: '/main'
 	},
 	{
+		name: 'main',
 		path: '/main',
 		component: () => {
 			return import('../views/main/main.vue')
 		},
-		children: [
-			// {
-			// 	path: 'index',
-			// 	component: () => {
-			// 		return import('../views/Info/index.vue')
-			// 	}
-			// },
-			{
-				path: 'home',
-				component: () => {
-					return import('../views/Info/Home.vue')
-				}
-			},
-			{
-				path: 'article',
-				component: () => {
-					return import('../views/Info/Article.vue')
-				}
-			},
-			{
-				path: 'project',
-				component: () => {
-					return import('../views/Info/Project.vue')
-				}
-			},
-			{
-				path: 'about',
-				component: () => {
-					return import('../views/Info/About.vue')
-				}
-			},
+		// children: [
+		// 	// {
+		// 	// 	path: 'index',
+		// 	// 	component: () => {
+		// 	// 		return import('../views/Info/index.vue')
+		// 	// 	}
+		// 	// },
+		// 	{
+		// 		path: 'home',
+		// 		component: () => {
+		// 			return import('../views/Info/Home.vue')
+		// 		}
+		// 	},
+		// 	{
+		// 		path: 'article',
+		// 		component: () => {
+		// 			return import('../views/Info/Article.vue')
+		// 		}
+		// 	},
+		// 	{
+		// 		path: 'project',
+		// 		component: () => {
+		// 			return import('../views/Info/Project.vue')
+		// 		}
+		// 	},
+		// 	{
+		// 		path: 'about',
+		// 		component: () => {
+		// 			return import('../views/Info/About.vue')
+		// 		}
+		// 	},
 
-			{
-				path: 'lifeRecord',
-				component: () => {
-					return import('../views/Info/Life.vue')
-				}
-			},
-			{
-				path: 'articleDetail/:id',
-				component: () => {
-					return import('../views/Info/ArticleDetail.vue')
-				}
-			},
-			{
-				path: 'timeline',
-				component: () => {
-					return import('../views/Info/Timeline.vue')
-				}
-			}
-		]
+		// 	{
+		// 		path: 'lifeRecord',
+		// 		component: () => {
+		// 			return import('../views/Info/Life.vue')
+		// 		}
+		// 	},
+		// 	{
+		// 		path: 'articleDetail/:id',
+		// 		component: () => {
+		// 			return import('../views/Info/ArticleDetail.vue')
+		// 		}
+		// 	},
+		// 	{
+		// 		path: 'timeline',
+		// 		component: () => {
+		// 			return import('../views/Info/Timeline.vue')
+		// 		}
+		// 	}
+		// ]
+	},
+	
+	{
+		name: 'index',
+		path: '/index',
+		component: () => {
+			return import('../views/page/index.vue')
+		}
+	},
+	{
+		name: 'share',
+		path: '/share',
+		component: () => {
+			return import('../views/page/share.vue')
+		}
 	},
 
 	{
