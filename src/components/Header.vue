@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="headerLeft">
-      <img :src="schoolLogo" width="267px" height="63px" />
+      <img :src="logo" height="80px" />
     </div>
     <div class="headerRight">
       <a-menu
@@ -15,7 +15,7 @@
           </template>
           首页
         </a-menu-item>
-        <a-menu-item key="hot" disabled>
+        <!-- <a-menu-item key="hot" disabled>
           <template #icon>
             <img :src="hotImg" width="20px" height="20px" />
           </template>
@@ -28,7 +28,7 @@
           <template #title>项目</template>
           <a-menu-item key="service">旅游</a-menu-item>
           <a-menu-item key="group">3D打印</a-menu-item>
-        </a-sub-menu>
+        </a-sub-menu> -->
         <a-menu-item key="share">
           <template #icon>
             <img :src="shareImg" width="20px" height="20px" />
@@ -72,7 +72,7 @@ export default {
     };
     return {
       handelClick,
-      schoolLogo: require("@/assets/img/school-logo.png"),
+      logo: require("@/assets/img/logo.png"),
       indexImg: require("@/assets/img/index.png"),
       hotImg: require("@/assets/img/hot.png"),
       projectImg: require("@/assets/img/project.png"),
@@ -91,7 +91,8 @@ export default {
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background-color: rgba(128, 128, 128, 0.4);
+  background-color: white;
+  box-shadow: 0 0 5px 3px rgb(0 0 0 / 15%);
 }
 
 .headerLeft {
@@ -108,7 +109,6 @@ export default {
 
 .ant-menu-horizontal {
   background-color: transparent;
-  color: white;
 }
 
 .ant-menu {
