@@ -18,8 +18,16 @@
                     >{{ tag }}</a-tag
                   >
                 </div></p>
-          <p>地址：{{place.address}}</p>
-          <p>附近美食： {{place.food}}</p>
+          <p v-if="place.address">地址：{{place.address}}</p>
+          <p v-if="place.food">附近美食： {{place.food}}</p>
+          <p v-if="place.toMap">
+            <a-button type="primary" shape="round" @click="goMap">
+                <template #icon>
+                <aim-outlined />
+                </template>
+                云上田园
+            </a-button>
+      </p>
         </div>
       </div>
       <div class="bottom">
@@ -64,6 +72,9 @@ export default {
   },
   methods: {
 
+    goMap () {
+      window.open('https://www.720yun.com/t/c6akiw1e72h?scene_id=120016380');
+    }
 
   },
 
